@@ -1,8 +1,7 @@
-Package: razzotestresults
+Package: raztr
 Title: Razzo Test Results
 Version: 0.1
 Authors@R: c(
-    person("Giovanni", "Laudanno", role = c("aut")),
     person("Richel J.C.", "Bilderbeek", email = "richel@richelbilderbeek.nl", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1107-7049")))
 Maintainer: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl>
 Description: The 'razzo' package is an experiment to chart
