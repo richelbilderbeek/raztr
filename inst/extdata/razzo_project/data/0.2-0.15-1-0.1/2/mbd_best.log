@@ -1,0 +1,71 @@
+#
+#model:
+#
+#<?xml version="1.0" encoding="UTF-8" standalone="no"?><input id="posterior" spec="beast.core.util.CompoundDistribution">
+#    <distribution id="prior" spec="beast.core.util.CompoundDistribution">
+#        <distribution id="YuleModel.t:mbd" spec="beast.evolution.speciation.YuleModel">
+#            <parameter id="birthRate.t:mbd" name="birthDiffRate" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#            <tree id="Tree.t:mbd" spec="beast.evolution.tree.Tree">
+#                <taxonset id="TaxonSet.mbd" spec="beast.evolution.alignment.TaxonSet">
+#                </taxonset>
+#            </tree>
+#        </distribution>
+#        <prior id="YuleBirthRatePrior.t:mbd" name="distribution" x="@birthRate.t:mbd">
+#            <Uniform id="Uniform.100" name="distr" upper="Infinity"/>
+#        </prior>
+#        <prior id="KappaPrior.s:mbd" name="distribution">
+#            <parameter id="kappa.s:mbd" lower="0.0" name="x" spec="beast.core.parameter.RealParameter">2.0</parameter>
+#            <LogNormal id="LogNormalDistributionModel.0" name="distr">
+#                <parameter estimate="false" id="RealParameter.0" name="M" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#                <parameter estimate="false" id="RealParameter.1" lower="0.0" name="S" spec="beast.core.parameter.RealParameter" upper="Infinity">1.25</parameter>
+#            </LogNormal>
+#        </prior>
+#        <prior id="ClockPrior.c:mbd" name="distribution">
+#            <parameter id="clockRate.c:mbd" name="x" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#            <Uniform id="Uniform.150" name="distr" upper="Infinity"/>
+#        </prior>
+#        <distribution id="auto_name_1.prior" monophyletic="true" spec="beast.math.distributions.MRCAPrior" tree="@Tree.t:mbd">
+#            <taxonset id="auto_name_1" spec="beast.evolution.alignment.TaxonSet">
+#                <taxon id="t1" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="t8" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="t6" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="t9" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="t13" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="t11" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="t16" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="t7" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="t5" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="t14" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="t12" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="t10" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="t3" spec="beast.evolution.alignment.Taxon"/>
+#                <taxon id="t15" spec="beast.evolution.alignment.Taxon"/>
+#            </taxonset>
+#            <Normal id="Normal.151" name="distr">
+#                <parameter estimate="false" id="RealParameter.300" name="mean" spec="beast.core.parameter.RealParameter">8.0</parameter>
+#                <parameter estimate="false" id="RealParameter.301" name="sigma" spec="beast.core.parameter.RealParameter">1.0E-4</parameter>
+#            </Normal>
+#        </distribution>
+#    </distribution>
+#    <distribution id="likelihood" spec="beast.core.util.CompoundDistribution" useThreads="true">
+#        <distribution data="@mbd" id="treeLikelihood.mbd" spec="beast.evolution.likelihood.ThreadedTreeLikelihood" tree="@Tree.t:mbd">
+#            <siteModel id="SiteModel.s:mbd" spec="beast.evolution.sitemodel.SiteModel">
+#                <parameter estimate="false" id="mutationRate.s:mbd" name="mutationRate" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#                <parameter estimate="false" id="gammaShape.s:mbd" name="shape" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#                <parameter estimate="false" id="proportionInvariant.s:mbd" lower="0.0" name="proportionInvariant" spec="beast.core.parameter.RealParameter" upper="1.0">0.0</parameter>
+#                <substModel id="hky.s:mbd" kappa="@kappa.s:mbd" spec="beast.evolution.substitutionmodel.HKY">
+#                    <frequencies id="estimatedFreqs.s:mbd" spec="beast.evolution.substitutionmodel.Frequencies">
+#                        <parameter dimension="4" id="freqParameter.s:mbd" lower="0.0" name="frequencies" spec="beast.core.parameter.RealParameter" upper="1.0">0.25</parameter>
+#                    </frequencies>
+#                </substModel>
+#            </siteModel>
+#            <branchRateModel clock.rate="@clockRate.c:mbd" id="StrictClock.c:mbd" spec="beast.evolution.branchratemodel.StrictClockModel"/>
+#        </distribution>
+#    </distribution>
+#</input>
+#
+Sample	posterior	likelihood	prior	treeLikelihood.mbd	TreeHeight	kappa	freqParameter.1	freqParameter.2	freqParameter.3	freqParameter.4	YuleModel	birthRate	logP(mrca(auto_name_1))	mrca.age(auto_name_1)	clockRate
+0	-1.5894158656193416E9	-16107.709498951275	-1.5893997579098427E9	-16107.709498951275	2.3619156500836436	2.0	0.25	0.25	0.25	0.25	-7.497297255400514	1.0	-1.5893997485471854E9	2.3619156500836436	1.0
+1000	-30413.084670142456	-8399.556117697754	-22013.528552444703	-8399.556117697754	7.979023707403517	2.0	0.24265972052283266	0.2573402794771673	0.25	0.25	-19.71203958581186	0.9766997619151889	-21991.951152824917	7.979023707403517	0.2839983123239331
+2000	-30402.866029949117	-8390.44973197082	-22012.416297978296	-8390.44973197082	7.979023707403517	2.0	0.24265972052283266	0.2573402794771673	0.25730029996082643	0.24269970003917352	-18.59978511940657	0.6809772092308685	-21991.951152824917	7.979023707403517	0.261927680879893
+3000	-13163.794005214273	-8344.992926430914	-4818.801078783359	-8344.992926430914	7.990196200887037	1.5217397448576055	0.24265972052283266	0.261993291477046	0.25730029996082643	0.23804668803929485	-19.698989811996775	0.41476732896528157	-4797.432450528071	7.990196200887037	0.284701938424736

@@ -1,0 +1,21 @@
+<itsabeastystatewerein version='2.0' sample='3000'>
+<statenode id='Tree.t:mbd_twin'>(((0:1.2644757497297383,(((((2:0.1560924252696479,7:0.1560924252696479)19:0.2693402318297556,(4:0.36569335554230675,13:0.36569335554230675)18:0.059739301557096725)16:0.07038854871431238,10:0.49582120581371586)20:0.5926215682545566,11:1.0884427740682725)25:0.13118028596262166,12:1.2196230600308942)24:0.04485268969884415)15:0.0952447515936028,(1:0.12775628781746826,((3:0.08625251676636593,5:0.08625251676636593)23:7.302568826677153E-4,9:0.08698277364903365)17:0.04077351416843461)22:1.2319642135058728)21:6.650695096878728,(6:0.09518476506508991,8:0.09518476506508991)14:7.915230833136979)26:0.0</statenode>
+<statenode id='BDBirthRate.t:mbd_twin'>BDBirthRate.t:mbd_twin[1 1] (0.0,10000.0): 0.2521834078136087 </statenode>
+<statenode id='BDDeathRate.t:mbd_twin'>BDDeathRate.t:mbd_twin[1 1] (0.0,1.0): 0.6928333187233671 </statenode>
+<statenode id='clockRate.c:mbd_twin'>clockRate.c:mbd_twin[1 1] (0.0,Infinity): 0.41002728542937683 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"BirthRateScaler.t:mbd_twin","p":0.75,"accept":78,"reject":35,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"DeathRateScaler.t:mbd_twin","p":0.75,"accept":73,"reject":22,"acceptFC":0,"rejectFC":0,"rejectIv":9,"rejectOp":9},
+{"id":"BirthDeathTreeScaler.t:mbd_twin","p":0.5,"accept":4,"reject":109,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathTreeRootScaler.t:mbd_twin","p":0.5,"accept":2,"reject":116,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathUniformOperator.t:mbd_twin","p":"NaN","accept":230,"reject":834,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathSubtreeSlide.t:mbd_twin","p":1,"accept":27,"reject":501,"acceptFC":0,"rejectFC":0,"rejectIv":180,"rejectOp":180},
+{"id":"BirthDeathNarrow.t:mbd_twin","p":"NaN","accept":111,"reject":450,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathWide.t:mbd_twin","p":"NaN","accept":5,"reject":98,"acceptFC":0,"rejectFC":0,"rejectIv":53,"rejectOp":53},
+{"id":"BirthDeathWilsonBalding.t:mbd_twin","p":"NaN","accept":5,"reject":95,"acceptFC":0,"rejectFC":0,"rejectIv":26,"rejectOp":26},
+{"id":"StrictClockRateScaler.c:mbd_twin","p":0.75,"accept":18,"reject":95,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"strictClockUpDownOperator.c:mbd_twin","p":0.75,"accept":6,"reject":87,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0}
+]}
+-->

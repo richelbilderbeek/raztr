@@ -1,0 +1,21 @@
+<itsabeastystatewerein version='2.0' sample='3000'>
+<statenode id='Tree.t:mbd_twin'>((0:0.94666366104962,(((1:0.1673376048298241,(6:0.13435993103937557,7:0.13435993103937557)9:0.032977673790448525)11:0.06848452067627073,8:0.23582212550609483)12:0.5742290127609883,(3:0.7634716237243773,(4:0.42682410581737174,5:0.42682410581737174)13:0.33664751790700553)14:0.04657951454270581)15:0.13661252278253688)10:7.054375988477766,2:8.001039649527385)16:0.0</statenode>
+<statenode id='BDBirthRate.t:mbd_twin'>BDBirthRate.t:mbd_twin[1 1] (0.0,10000.0): 0.0704653628445796 </statenode>
+<statenode id='BDDeathRate.t:mbd_twin'>BDDeathRate.t:mbd_twin[1 1] (0.0,1.0): 0.9604600698459713 </statenode>
+<statenode id='clockRate.c:mbd_twin'>clockRate.c:mbd_twin[1 1] (0.0,Infinity): 0.7778307084097537 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"BirthRateScaler.t:mbd_twin","p":0.75,"accept":76,"reject":25,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"DeathRateScaler.t:mbd_twin","p":0.75,"accept":57,"reject":54,"acceptFC":0,"rejectFC":0,"rejectIv":27,"rejectOp":27},
+{"id":"BirthDeathTreeScaler.t:mbd_twin","p":0.5,"accept":4,"reject":110,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathTreeRootScaler.t:mbd_twin","p":0.5,"accept":1,"reject":109,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathUniformOperator.t:mbd_twin","p":"NaN","accept":162,"reject":903,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathSubtreeSlide.t:mbd_twin","p":1,"accept":28,"reject":506,"acceptFC":0,"rejectFC":0,"rejectIv":164,"rejectOp":164},
+{"id":"BirthDeathNarrow.t:mbd_twin","p":"NaN","accept":71,"reject":484,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathWide.t:mbd_twin","p":"NaN","accept":2,"reject":89,"acceptFC":0,"rejectFC":0,"rejectIv":45,"rejectOp":45},
+{"id":"BirthDeathWilsonBalding.t:mbd_twin","p":"NaN","accept":2,"reject":123,"acceptFC":0,"rejectFC":0,"rejectIv":52,"rejectOp":52},
+{"id":"StrictClockRateScaler.c:mbd_twin","p":0.75,"accept":20,"reject":79,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"strictClockUpDownOperator.c:mbd_twin","p":0.75,"accept":1,"reject":95,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0}
+]}
+-->

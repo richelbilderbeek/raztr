@@ -1,0 +1,23 @@
+<itsabeastystatewerein version='2.0' sample='3000'>
+<statenode id='Tree.t:mbd'>(((((0:0.5253655794195854,12:0.5253655794195854)21:0.04769895619110087,11:0.5730645356106863)16:0.018142369815679626,(((2:0.04814870782679242,7:0.04814870782679242)15:0.2326865295005242,(4:0.19030591655754164,13:0.19030591655754164)22:0.09052932076977499)19:0.13805527279790353,10:0.41889051012522016)25:0.17231639530114573)24:0.016287576616358823,(1:0.2961972445826319,(3:0.27753674573559417,(5:0.06263905533706365,9:0.06263905533706365)17:0.21489769039853052)14:0.018660498847037743)23:0.3112972374600928)18:7.382701718844312,(6:0.059089342843776343,8:0.059089342843776343)20:7.93110685804326)26:0.0</statenode>
+<statenode id='kappa.s:mbd'>kappa.s:mbd[1 1] (0.0,Infinity): 1.5217397448576055 </statenode>
+<statenode id='freqParameter.s:mbd'>freqParameter.s:mbd[4 1] (0.0,1.0): 0.24265972052283266 0.261993291477046 0.25730029996082643 0.23804668803929485 </statenode>
+<statenode id='birthRate.t:mbd'>birthRate.t:mbd[1 1] (-Infinity,Infinity): 0.41476732896528157 </statenode>
+<statenode id='clockRate.c:mbd'>clockRate.c:mbd[1 1] (0.0,Infinity): 0.284701938424736 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"YuleBirthRateScaler.t:mbd","p":0.75,"accept":78,"reject":27,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelTreeScaler.t:mbd","p":0.5,"accept":1,"reject":113,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelTreeRootScaler.t:mbd","p":0.5,"accept":4,"reject":111,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelUniformOperator.t:mbd","p":"NaN","accept":222,"reject":872,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelSubtreeSlide.t:mbd","p":1,"accept":20,"reject":517,"acceptFC":0,"rejectFC":0,"rejectIv":227,"rejectOp":227},
+{"id":"YuleModelNarrow.t:mbd","p":"NaN","accept":75,"reject":521,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelWide.t:mbd","p":"NaN","accept":2,"reject":106,"acceptFC":0,"rejectFC":0,"rejectIv":60,"rejectOp":60},
+{"id":"YuleModelWilsonBalding.t:mbd","p":"NaN","accept":2,"reject":97,"acceptFC":0,"rejectFC":0,"rejectIv":28,"rejectOp":28},
+{"id":"KappaScaler.s:mbd","p":0.5,"accept":1,"reject":3,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"FrequenciesExchanger.s:mbd","p":0.010000000000000004,"accept":4,"reject":1,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"StrictClockRateScaler.c:mbd","p":0.75,"accept":20,"reject":97,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"strictClockUpDownOperator.c:mbd","p":0.75,"accept":3,"reject":104,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0}
+]}
+-->

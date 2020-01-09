@@ -1,0 +1,21 @@
+<itsabeastystatewerein version='2.0' sample='3000'>
+<statenode id='Tree.t:mbd'>((((0:0.9964482739803596,12:0.9964482739803596)24:0.220160815024396,((((2:0.0905385939634412,7:0.0905385939634412)20:0.4280963542923223,(4:0.42404706115095225,13:0.42404706115095225)23:0.09458788710481125)19:0.3823367531286723,10:0.9009717013844358)14:0.2558907659894172,11:1.156862467373853)15:0.05974662163090261)22:0.044343909318716346,(1:0.6461767248895085,(3:0.5586442385464074,(5:0.11777466660734859,9:0.11777466660734859)17:0.44086957193905885)21:0.08753248634310107)18:0.6147762734339635)16:6.770671217822512,(6:0.08737929576555536,8:0.08737929576555536)25:7.944244920380428)26:0.0</statenode>
+<statenode id='BDBirthRate.t:mbd'>BDBirthRate.t:mbd[1 1] (0.0,10000.0): 0.3646425701424716 </statenode>
+<statenode id='BDDeathRate.t:mbd'>BDDeathRate.t:mbd[1 1] (0.0,1.0): 0.6801595199155408 </statenode>
+<statenode id='clockRate.c:mbd'>clockRate.c:mbd[1 1] (0.0,Infinity): 0.11836573085074019 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"BirthRateScaler.t:mbd","p":0.75,"accept":77,"reject":26,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"DeathRateScaler.t:mbd","p":0.75,"accept":76,"reject":19,"acceptFC":0,"rejectFC":0,"rejectIv":4,"rejectOp":4},
+{"id":"BirthDeathTreeScaler.t:mbd","p":0.5,"accept":2,"reject":115,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathTreeRootScaler.t:mbd","p":0.5,"accept":3,"reject":107,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathUniformOperator.t:mbd","p":"NaN","accept":170,"reject":889,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathSubtreeSlide.t:mbd","p":1,"accept":33,"reject":507,"acceptFC":0,"rejectFC":0,"rejectIv":183,"rejectOp":183},
+{"id":"BirthDeathNarrow.t:mbd","p":"NaN","accept":44,"reject":486,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathWide.t:mbd","p":"NaN","accept":3,"reject":118,"acceptFC":0,"rejectFC":0,"rejectIv":65,"rejectOp":65},
+{"id":"BirthDeathWilsonBalding.t:mbd","p":"NaN","accept":2,"reject":124,"acceptFC":0,"rejectFC":0,"rejectIv":26,"rejectOp":26},
+{"id":"StrictClockRateScaler.c:mbd","p":0.75,"accept":28,"reject":79,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"strictClockUpDownOperator.c:mbd","p":0.75,"accept":2,"reject":91,"acceptFC":0,"rejectFC":0,"rejectIv":0,"rejectOp":0}
+]}
+-->
