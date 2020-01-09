@@ -1,4 +1,4 @@
 library(testthat)
-library(razzotestresults)
+library(raztr)
 
-test_check("razzotestresults")
+test_check("raztr")
